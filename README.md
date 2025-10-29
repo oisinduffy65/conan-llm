@@ -49,3 +49,17 @@ Wellformedness
 Export to LaTeX
 
 ![Export to LaTeX](pictures/exportlatex.gif)
+
+## Using LLM
+
+In order to use the LLM first `export OPENAI_API_KEY="your-api-key"` and then from the project root run
+
+```
+python src/integration/llm_proof_driver.py \\
+    --premise "P → Q" \\
+    --premise "P" \\
+    --conclusion "Q" \\
+    --model gpt-5
+```
+
+where you can add any number of premeses, there must be a conclusion and you can select your openai model
